@@ -1,7 +1,7 @@
 <template>
     <div class="min-h-screen flex flex-col">
       <!-- Navbar and Header -->
-      <nav class="bg-blue-600 p-4 text-white flex justify-between items-center">
+      <nav class="bg-gray-600 p-4 text-white flex justify-between items-center">
         <h1 class="text-2xl font-semibold">File Organize</h1>
         <div class="relative">
           <button @click="toggleDropdown" class="focus:outline-none">
@@ -20,12 +20,12 @@
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-xl font-semibold">My Files & Folders</h2>
           <div v-if="!currentFolder" class="flex flex-col sm:flex-row sm:justify-start sm:space-x-2">
-            <button @click="showCreateFolder" class="bg-blue-600 font-semibold text-white py-2 px-4 rounded-md mb-2 sm:mb-0">Create Folder</button>
+            <button @click="showCreateFolder" class="bg-gray-600 font-semibold text-white py-2 px-4 rounded-md mb-2 sm:mb-0">Create Folder</button>
             <button @click="showUploadFile" class="bg-yellow-300 font-semibold text-black py-2 px-4 rounded-md">Upload File</button>
           </div>
           <div v-else class="flex flex-col sm:flex-row sm:justify-start sm:space-x-2">
             <button @click="goBack" class="bg-yellow-300 text-black py-2 px-4 font-semibold rounded-md mb-2 sm:mb-0">Back</button>
-            <!-- <button @click="showCreateFolder" class="bg-blue-600 font-semibold text-white py-2 px-4 rounded-md mb-2 sm:mb-0">Create Folder</button>
+            <!-- <button @click="showCreateFolder" class="bg-gray-600 font-semibold text-white py-2 px-4 rounded-md mb-2 sm:mb-0">Create Folder</button>
             <button @click="showUploadFile" class="bg-yellow-300 font-semibold text-black py-2 px-4 rounded-md">Upload File</button> -->
           </div>
         </div>
@@ -57,7 +57,7 @@
         <h2 class="text-xl font-semibold mb-2">All Files</h2>
 
         <!-- Progress Bar -->
-        <div v-if="isLoading" class=" mb-2 w-full h-1 bg-blue-500 z-50">
+        <div v-if="isLoading" class=" mb-2 w-full h-1 bg-gray-500 z-50">
           <div class="h-full bg-green-500" :style="{ width: progress + '%' }"></div>
         </div>
         
